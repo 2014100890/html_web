@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang = "en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content="width=device-width, initial-scale = 1.0">
+        <title>Window Size</title>
+        <style> /* inline block : 효과 컨텐츠 감싸기*/ 
+            .tag{
+                display: inline-block; 
+                background-color: thistle;
+                padding: 16px;
+                margin-top: 16px;
+                font-size: 48px;
+            }
+        </style>
+    </head> 
+    <body>
+        <div class="tag">Window Size</div>
+        <script>
+            const tag = document.querySelector('.tag');
+            
+            function updateTag(){
+                tag.innerHTML = `
+                window.screen: ${window.screen.width}, ${window.screen.height}<br/>
+                window.outer: ${window.outerWidth}, ${window.outerHeight}<br/>
+                window.inner: ${window.innerWidth}, ${window.innerHeight}<br/>
+                documentElement.clientWidth: ${document.documentElement.clientWidth}, ${document.documentElement.clientHeight}
+                `;
+            }
+            /*
+                string template  사용하기 : 변수와 텍스트 함께 사용하기 
+            */
+            window.addEventListener('resize', () => {
+              updateTag();
+            });
+            updateTag(); // 페이지 로딩 하자마자 실행 
+        </script>
+    </body>
+</html>
