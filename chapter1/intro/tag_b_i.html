@@ -1,0 +1,52 @@
+<!-- 웹 브라우저에게 html 버전 알려주기 -->
+<!DOCTYPE html> 
+
+<html>
+    <head>
+        <!-- head 태그 내에는 내용 외에 많은 것들이 들어감
+        <!-- title, style -->
+        <!-- 메뉴바에 표시되는 글자 -->
+        <title>나의 첫 웹페이지</title>
+        <!-- 한글 인코딩, 다른 브라우저 --> 
+        <meta chareset = 'utf-8'>
+        <style>
+        h1{
+            font-size : 80px;
+            text-align: center;
+        }
+        h2{
+            text-align: right ;
+            color: blue;
+        }
+        h3{
+            margin-top: 100px;
+            margin-left : 30px;
+        }
+        /* p 태그 안에 있는 i 태그만 적용 */
+        /* 위에 태그 적용 태그 안에 스페이스 */ -->
+        p i{
+            font-size : 30px;
+        }
+        /* 이미지 가운데 정렬 */
+        img{
+            display: block;
+            margin-left:auto;
+            margin-right: auto;
+        }
+        </style>   
+    </head>
+    <body>
+    <h1>나는 지금 배가 고파</h1>
+    <h2>그래서 <i>마트</i>에 갔지</h2>
+    <h3>어제는 편의점에 갔는데</h3>
+    <img height ='300' src ='../images/polo6.jpeg'>
+    <p>오늘 간 마트의 우유가격이 편의점보다 <b>50원이</b> 비쌌어
+        <i>마트보다 편의점이 더 비싸다니</i>
+    </p>
+    <!-- target='_blank' : 새 탭으로 이동-->
+    <!-- target 속성 없으면 현재 창에서 이동 -->
+    <a href ='https://google.com' target="_blank">구글로고고</a>
+    <a href ='folder_1/page1.html' target="_blank">페이지1로이동</a>
+    
+    </body>
+</html>
