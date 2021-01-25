@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      body {
+        background-color: black;
+        text-align: center;
+      }
+      section {
+        width: 50%;
+        margin: 50px auto;
+        background-color: brown;
+        border-radius: 20px;
+        padding: 20px;
+      }
+      img {
+        z-index: 100;
+        will-change: opacity;
+      }
+      h1,
+      h3,
+      span {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <img src="img/people.png" alt="avatar" />
+      <img src="img/avatar.png" alt="avatar" />
+
+      <h1 id="brand">Dream Coding</h1>
+      <h3>Don't forget to code your dream</h3>
+    </section> 
+    <span>Hello World!</span>
+    <script>
+      // query selector : 처음에 찾아진 Element를 리턴한다. 
+      // 찾지 못하면 null 리턴 
+      // const image = document.querySelector('img'); 
+      // const image = document.querySelector('img[src="img/avatar.png"]'); 
+
+      // Queryselector 이용 class, id 
+      // const image = document.querySelector('.brand'); 
+      // const image = document.querySelector('#brand'); 
+
+      // 전부다 받아오기  querySelectorAll
+      // const image = document.querySelectorAll('img'); 
+      const section = document.querySelector('section'); 
+
+      // createElement : 새로운 것 추가 하기 
+      const h2 = document.createElement('h2');
+      // 클래스 이름 추가하기 
+      h2.setAttribute('class', 'title');  // <h2 class = 'title'></h2>
+      h2.textContent = 'This is a title';  // <h2 class = 'title'>This is a title</h2>
+      // 새로운 자식 요소 추가 append는 appendchild와 달리 리턴 되는 value 없음 
+      // section.appendChild(h2); // 끝에 추가 
+      // insertBefore(newnode, referencenode) refer전에 추가 
+      const h3 = document.querySelector('h3'); 
+      section.insertBefore(h2, h3); 
+;      console.log(image); 
+    </script>
+  </body>
+</html>
