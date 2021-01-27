@@ -65,7 +65,10 @@
       // insertBefore(newnode, referencenode) refer전에 추가 
       const h3 = document.querySelector('h3'); 
       section.insertBefore(h2, h3); 
-;      console.log(image); 
+      console.log(image); 
+      // innerHTML 보다 textContent가 더 효율적이다 (DOM tree 다시 그릴 필요 없음)
+      // 변경할 일 없을 때 사용 
+      // section.removeChild(h2); 
     </script>
   </body>
 </html>
