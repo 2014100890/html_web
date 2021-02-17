@@ -7,10 +7,12 @@
  mutable : let, immutable : const 
 */
 
-// 2.Variable 변수 (변경될 수 있는 값)
-// 변수 선언 : let (added in ES6 에서 추가) 
-// block scope, global scope
-//변경가능 : mutable
+/* 2.Variable 변수 (변경될 수 있는 값)
+변수 선언 : let (added in ES6 에서 추가) 
+block scope, global scope
+변경가능 : mutable
+read/write 
+*/
 {
     let name = 'ellie';
     console.log(name); 
@@ -23,8 +25,12 @@
     block scope도 안됨 
 */
 
-/* 3. Constant
+/* 3. Constant , r(read only)
+Immutable data types : primitive types, frozen objects (i.e. object.freeze())
+mutable data types : all objects by default are mutavle in JS.
 favor immutable data type always for a few reasons (안바꿀 값)
+use const whenever possible
+only use let if variale needs to change
 - security
 - thread safety
 - reduce human mistakes
@@ -34,9 +40,10 @@ const maxNumber = 5;
 
 /* 
 4. Variable types
-1) primitive, single item (더이상 나뉠 수 없는 한 가지 type)
+1) primitive, single item (더이상 나뉠 수 없는 한 가지 type) 값 자체가 메모리에 저장된다. 
 : number(숫자), string, boolean, null, undefine, symbol
-2) object, box container : single item을 묶어 한 box로 관리 
+2) object, box container : single item을 묶어 한 box로 관리, 
+bject를 가리키는 ref를 저장한다/  ref를 통해 데이터에 접근한다. 
 : function, first-class function (자바스크립트에서는 function도 데이터 타입임/ 변수에 할당도 가능하다 )
 */
 let a = 12; 
@@ -64,8 +71,7 @@ true: any other value
 /* null : empty 값이라 할당 */
 let nothing = null; 
 /* undefiened : 선언은 되었지만 값을 안 넣은 상태 */
-let x;
-// let x = undefined; 
+let x; // let x = undefined; 
 
 /* symbol, create unique identifiers for objects */
 const symbol1 = Symbol('id'); // 우선순위를 주고싶을 때 식별자로 사용 (고유값)
